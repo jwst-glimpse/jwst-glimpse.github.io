@@ -119,6 +119,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  flex-shrink: 0;
   line-height: 1.1;
   color: var(--fg);
   text-decoration: none;
@@ -131,6 +132,10 @@ section {
 .wordmark-logo {
   height: 34px;
   width: auto;
+  /* The global img rule caps width at 100%, which would squash a fixed-height
+     logo if the header ever ran out of room. object-fit keeps the proportions. */
+  object-fit: contain;
+  object-position: left center;
 }
 
 @media (max-width: 420px) {
