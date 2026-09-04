@@ -950,3 +950,26 @@ body.has-lightbox {
   height: 100%;
   object-fit: contain;
 }
+
+/* Below about 800px the hero credit, absolutely positioned bottom-right, runs
+   into the hero buttons. Put it back in normal flow there so it stacks under
+   them instead of across them. */
+@media (max-width: 860px) {
+  /* .hero is a flex container, so a static credit would sit beside .wrap.
+     Let the hero wrap and give the credit a full-width row of its own. */
+  .hero {
+    flex-wrap: wrap;
+  }
+
+  .hero-credit {
+    position: static;
+    flex: 0 0 100%;
+    padding: 0 24px 14px;
+    margin: 0;
+    text-align: left;
+  }
+
+  .hero .wrap {
+    padding-bottom: 0.75rem;
+  }
+}
