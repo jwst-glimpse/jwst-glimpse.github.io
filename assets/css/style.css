@@ -424,6 +424,21 @@ th {
   letter-spacing: 0.04em;
 }
 
+/* The data products table is two long text columns plus four short ones, so give
+   the text the room and keep the short values from wrapping. */
+.table-products th:nth-child(1) {
+  width: 24%;
+}
+
+.table-products th:nth-child(2) {
+  width: 40%;
+}
+
+.table-products th:nth-child(n + 3),
+.table-products td:nth-child(n + 3) {
+  white-space: nowrap;
+}
+
 tbody tr:nth-child(even) {
   background: var(--bg-2);
 }
