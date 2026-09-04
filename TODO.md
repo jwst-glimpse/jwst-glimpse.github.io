@@ -29,5 +29,9 @@ primary source.
   #11008) are not published anywhere on the site, since FACTS.md could not confirm
   them.
 - **Secondary press coverage** (AAS Nova items, the Science.org article) is not
-  included on `news.html` because those page bodies were not fetched and verified;
-  only the two ESA/Webb items and the NASA/STScI release are shown.
+  included on `news.html` because those page bodies were not fetched and verified.
+  `news.html` currently shows the five verified releases in FACTS.md's press table
+  (ESA/Webb x2, NASA/STScI, CNRS, Sorbonne Universite).
+- **Marcie Mun correction.** She is an author of Atek et al. 2026, not of the
+  47-author survey paper (Atek et al. 2025, arXiv:2511.07542). She is deliberately
+  absent from `team/members.json`, which reflects only the survey paper's roster.

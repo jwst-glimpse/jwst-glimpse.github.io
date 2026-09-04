@@ -7,7 +7,8 @@
     "size": null,
     "url": null,
     "notes": "Committed in the proposal for delivery 3 months after observation.",
-    "release": "DR1"
+    "release": "DR1",
+    "source": "Proposal data-management plan"
   },
   {
     "name": "ICL and BCG subtracted NIRCam mosaics",
@@ -17,7 +18,8 @@
     "size": null,
     "url": null,
     "notes": "Committed in the proposal for delivery 6 months after observation.",
-    "release": "DR2"
+    "release": "DR2",
+    "source": "Proposal data-management plan"
   },
   {
     "name": "HST mosaics of the field",
@@ -26,8 +28,9 @@
     "version": null,
     "size": null,
     "url": null,
-    "notes": "Committed in the proposal for delivery 6 months after observation.",
-    "release": "DR2"
+    "notes": "Not a proposal deliverable. The survey overview paper (arXiv:2511.07542) states that the first public data release includes reduced JWST and HST mosaics, photometric catalogs, and gravitational lensing models.",
+    "release": "DR2",
+    "source": "Survey overview paper (arXiv:2511.07542)"
   },
   {
     "name": "PSF-matched photometric catalog with photometric redshifts",
@@ -37,7 +40,8 @@
     "size": null,
     "url": null,
     "notes": "Committed in the proposal for delivery 9 months after observation.",
-    "release": "DR3"
+    "release": "DR3",
+    "source": "Proposal data-management plan"
   },
   {
     "name": "Gravitational lens models: deflection, convergence and shear maps with uncertainties",
@@ -47,16 +51,7 @@
     "size": null,
     "url": null,
     "notes": "Committed in the proposal for delivery 9 months after observation.",
-    "release": "DR3"
-  },
-  {
-    "name": "NIRSpec spectra from GLIMPSE-D (DD 9223)",
-    "description": "JWST/NIRSpec multi-object spectroscopy from the GLIMPSE-D DDT program (DD 9223).",
-    "format": null,
-    "version": null,
-    "size": null,
-    "url": null,
-    "notes": "Ancillary spectroscopic program, not part of the DR1/DR2/DR3 imaging schedule.",
-    "release": "DR3"
+    "release": "DR3",
+    "source": "Proposal data-management plan"
   }
 ]

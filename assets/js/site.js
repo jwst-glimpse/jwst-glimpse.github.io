@@ -39,6 +39,84 @@
     return '<span class="tbd">TBD</span>';
   }
 
+  /* ------------------------------------------------------------------ */
+  /* Title rendering: ADS titles carry <SUP>/<SUB> markup and inline     */
+  /* LaTeX math ($...$) that must not be printed raw.                    */
+  /* ------------------------------------------------------------------ */
+  function renderMath(expr) {
+    var s = expr;
+
+    /* Text-mode switches: keep the enclosed text, drop the macro. */
+    s = s.replace(/\\mathrm\{([^{}]*)\}/g, "$1");
+    s = s.replace(/\\rm(?![a-zA-Z])/g, "");
+
+    /* Superscript / subscript: a braced group, a macro run, or one char. */
+    s = s.replace(/\^(\{[^{}]*\}|\\[a-zA-Z]+|[^\s{}_^$])/g, function (m, g) {
+      return "<sup>" + (g.charAt(0) === "{" ? g.slice(1, -1) : g) + "</sup>";
+    });
+    s = s.replace(/_(\{[^{}]*\}|\\[a-zA-Z]+|[^\s{}_^$])/g, function (m, g) {
+      return "<sub>" + (g.charAt(0) === "{" ? g.slice(1, -1) : g) + "</sub>";
+    });
+
+    /* Common macros to Unicode. Longest keys first so e.g. \simeq is
+       replaced before \sim. */
+    var MACROS = {
+      "\\simeq": "≃",
+      "\\approx": "≈",
+      "\\times": "×",
+      "\\alpha": "α",
+      "\\gamma": "γ",
+      "\\delta": "δ",
+      "\\sigma": "σ",
+      "\\lambda": "λ",
+      "\\star": "*",
+      "\\odot": "☉",
+      "\\sim": "~",
+      "\\beta": "β",
+      "\\mu": "μ",
+      "\\pm": "±",
+      "\\AA": "Å"
+    };
+    Object.keys(MACROS)
+      .sort(function (a, b) {
+        return b.length - a.length;
+      })
+      .forEach(function (key) {
+        s = s.split(key).join(MACROS[key]);
+      });
+
+    /* Thin-space macros. */
+    s = s.replace(/\\[,;!]/g, " ");
+
+    /* Any remaining backslash-macro is unrecognized: strip it, don't
+       print it raw. */
+    s = s.replace(/\\[a-zA-Z]+/g, "");
+    s = s.replace(/\\/g, "");
+
+    return s;
+  }
+
+  function renderTitle(raw) {
+    var s = escapeHtml(raw);
+
+    /* Restore ADS <SUP>/<SUB> markup (now HTML-escaped) to real elements. */
+    s = s.replace(/&lt;sup&gt;([\s\S]*?)&lt;\/sup&gt;/gi, "<sup>$1</sup>");
+    s = s.replace(/&lt;sub&gt;([\s\S]*?)&lt;\/sub&gt;/gi, "<sub>$1</sub>");
+
+    /* Convert inline LaTeX math delimited by a single pair of $. */
+    s = s.replace(/\$([^$]+)\$/g, function (m, inner) {
+      return renderMath(inner);
+    });
+
+    /* ADS represents a dash as "--". Convert both the space-delimited form
+       (LEGGOS Survey -- LEnsing) and the numeric-range form (4.5--10.1) to an
+       en-dash. Never introduce an em-dash. */
+    s = s.replace(/ -- /g, " – ");
+    s = s.replace(/(\w|\d)--(\w|\d)/g, "$1–$2");
+
+    return s;
+  }
+
   function fetchJson(url) {
     return fetch(url).then(function (res) {
       if (!res.ok) {
@@ -168,9 +246,9 @@
       var authors = p.authors || [];
       var truncated = authors.length > 8;
       var shortAuthors = truncated
-        ? authors.slice(0, 8).join(", ") + ", et al."
-        : authors.join(", ");
-      var fullAuthors = authors.join(", ");
+        ? authors.slice(0, 8).join("; ") + "; et al."
+        : authors.join("; ");
+      var fullAuthors = authors.join("; ");
 
       var titleUrl = p.doi_url || p.arxiv_url || p.ads_url || "#";
       var statusLabel = p.status || "Preprint";
@@ -190,6 +268,7 @@
           '" hidden>' +
           escapeHtml(fullAuthors) +
           "</span>" +
+          " " +
           '<button type="button" class="pub-show-all" data-target="' +
           fullId +
           '">show all authors</button>';
@@ -210,7 +289,7 @@
         '<h4 class="pub-title"><a href="' +
         escapeHtml(titleUrl) +
         '">' +
-        escapeHtml(p.title || "Untitled") +
+        renderTitle(p.title || "Untitled") +
         "</a></h4>" +
         '<p class="pub-authors">' +
         authorsHtml +
@@ -244,7 +323,7 @@
         var products = Array.isArray(data) ? data : data.products || [];
         if (!products.length) {
           tbody.innerHTML =
-            '<tr><td colspan="7">No products listed yet.</td></tr>';
+            '<tr><td colspan="8">No products listed yet.</td></tr>';
           return;
         }
         tbody.innerHTML = products
@@ -274,6 +353,9 @@
               "<td>" +
               escapeHtml(p.notes || "") +
               "</td>" +
+              "<td>" +
+              escapeHtml(p.source || "") +
+              "</td>" +
               "</tr>"
             );
           })
@@ -287,6 +369,13 @@
   /* ------------------------------------------------------------------ */
   /* Team renderer                                                       */
   /* ------------------------------------------------------------------ */
+  function displayName(name) {
+    var str = String(name || "");
+    var idx = str.indexOf(", ");
+    if (idx === -1) return str;
+    return str.slice(idx + 2) + " " + str.slice(0, idx);
+  }
+
   function initTeam() {
     var grid = document.getElementById("team-grid");
     if (!grid) return;
@@ -295,7 +384,12 @@
 
     fetchJson(MEMBERS_URL)
       .then(function (data) {
-        var members = Array.isArray(data) ? data : data.members || [];
+        var allMembers = Array.isArray(data) ? data : data.members || [];
+        /* Co-PIs already appear in the Leadership cards above; skip them
+           here so they are not shown twice. */
+        var members = allMembers.filter(function (m) {
+          return !m.role;
+        });
         if (!members.length) {
           grid.innerHTML = '<p class="pub-empty">No team members listed.</p>';
           return;
@@ -311,7 +405,7 @@
             return (
               '<div class="team-card">' +
               '<div class="team-name">' +
-              escapeHtml(m.name) +
+              escapeHtml(displayName(m.name)) +
               "</div>" +
               roleHtml +
               instHtml +
