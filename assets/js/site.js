@@ -118,7 +118,9 @@
   }
 
   function fetchJson(url) {
-    return fetch(url).then(function (res) {
+    /* no-store so an edit to a data file shows up straight away rather than
+       sitting behind the GitHub Pages CDN cache for ten minutes. */
+    return fetch(url, { cache: "no-store" }).then(function (res) {
       if (!res.ok) {
         throw new Error("HTTP " + res.status + " for " + url);
       }
