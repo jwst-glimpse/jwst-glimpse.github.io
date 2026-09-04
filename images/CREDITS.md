@@ -60,8 +60,24 @@ These are photographs of people, not CC BY 4.0 observatory imagery, so they are 
 | File | Bytes | Subject | Source page | Stated licence |
 |---|---|---|---|---|
 | `team-chisholm.jpg` | 42932 | John Chisholm, Co-PI | https://astronomy.utexas.edu/directory/john-chisholm (image served from `https://directory.cns.utexas.edu/sites/default/files/2023-01/astronomy%2C%20John%20Chisholm%20Directory.jpg`) | None stated on the page |
+| `team-atek.jpg` | 10160 | Hakim Atek, Co-PI | https://sciences.sorbonne-universite.fr/en/portraits/hakim-atek (image served from `https://sciences.sorbonne-universite.fr/sites/default/files/media/2024-07/2024_hakim_etak_su_pkitmacher_9800.jpg`) | Credited "Hakim Atek &copy; Pierre Kitmacher" in the image alt text; no reuse terms stated |
 
 The source pages carry no licence or reuse statement, so these portraits are used on the
 understanding that they are the subject's own institutional headshot being reused on their own
 collaboration's website. Confirm with each person, and replace with a photo they supply if they
 prefer. Remove any portrait on request.
+
+Both portraits are square centre crops of the source image, re-compressed as JPEG. `team-atek.jpg`
+carries a named photographer credit (Pierre Kitmacher, for Sorbonne Universite), which is a stronger
+claim than the UT Austin directory photo, so it is the first one to replace if Hakim Atek supplies a
+picture of his own.
+
+## glimpse-logo.png
+
+- Byte size: 15,297 bytes (382 x 121 px, RGBA)
+- The GLIMPSE collaboration's own wordmark, the white-on-dark variant. Taken from the copy held at
+  `sfseiji.github.io/project_logo/jwst/glimpse2.png`, which came from the collaboration rather than
+  from a public release page, so no original designer or licence is recorded.
+- The source file has the wordmark flattened onto an opaque black rectangle. It was un-matted
+  against black (alpha set from pixel luminance, colour un-multiplied) to restore the transparency
+  the flattened file lost, and the transparent margin was trimmed. No colours were changed.

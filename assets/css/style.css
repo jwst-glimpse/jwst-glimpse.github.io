@@ -118,6 +118,7 @@ section {
 .wordmark {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   line-height: 1.1;
   color: var(--fg);
   text-decoration: none;
@@ -127,10 +128,15 @@ section {
   text-decoration: none;
 }
 
-.wordmark .name {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  letter-spacing: 0.06em;
+.wordmark-logo {
+  height: 34px;
+  width: auto;
+}
+
+@media (max-width: 420px) {
+  .wordmark-logo {
+    height: 28px;
+  }
 }
 
 .wordmark .sub {
@@ -139,7 +145,7 @@ section {
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--fg-faint);
-  margin-top: 2px;
+  margin-top: 5px;
 }
 
 .nav-toggle {

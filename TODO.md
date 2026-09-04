@@ -18,11 +18,16 @@ primary source.
   Atek et al. 2025 (arXiv:2511.07542), so they reflect where each person was when that
   paper was submitted. Nobody has checked them against current positions. Update
   `team/members.json` when a member moves.
-- **Public contact address for GLIMPSE / Hakim Atek.** No address is available to
-  publish. `team.html` shows a `TBD` placeholder rather than an invented mailto link.
-- **No GLIMPSE logo exists.** None was found in any source, and this build does not
-  attempt to design one. The site uses the text wordmark "GLIMPSE" only. A 32x32 and
-  64x64 favicon were cropped from the hero image instead of a logo mark.
+- **Public contact address for GLIMPSE / Hakim Atek.** Still none available, so the
+  Contact section was dropped from `team.html` rather than left as a `TBD`. The Data page
+  now points questions at the survey leads and the GitHub repository instead. Add the
+  section back if the collaboration sets up a public address.
+- **The GLIMPSE logo is in the header, but its provenance is thin.** The wordmark now
+  used in the site header is the collaboration's own white-on-dark logo, recovered from a
+  local copy rather than from any public release page, so nobody has recorded who drew it
+  or under what terms. Ask the collaboration for the original file, ideally a vector one:
+  the copy in hand is only 382 x 121 px. The favicons are still centre crops of the hero
+  image, not the logo's gear mark.
 - **Data product format, version, and size fields** in `data/products.json` are all
   `null` pending the actual data release; the table shows `TBD` pills for these until
   real values are known.
@@ -44,11 +49,9 @@ primary source.
   photographs being shown on their own collaboration site, which is normal practice, but nobody has
   asked them. Confirm with Hakim Atek and John Chisholm, and swap in a photo they supply if they
   prefer one. See `images/CREDITS.md` for the exact sources.
-- **No portrait for Hakim Atek yet.** The best verified photo found is the Sorbonne Universite
-  portrait at https://www.sorbonne-universite.fr/en/portraits/hakim-atek , which the page labels
-  `Hakim Atek (c) Pierre Kitmacher` with no reuse licence, so it was deliberately not published
-  here. It is also a neutral, arms-folded portrait rather than the friendly headshot wanted. His
-  personal site hakimatek.com is dead (DNS does not resolve), the IAP directory and the CNRS pages
-  carry no photo of him, and the only other verified image (a 200x200 candid on savoirs.ens.fr) is
-  too low quality. The simplest fix is to ask him for a headshot, or to get clearance from Sorbonne
-  Universite communications or from Pierre Kitmacher.
+- **Portrait permissions are unconfirmed.** Hakim Atek's portrait is the Sorbonne Universite
+  photograph whose source page labels it `Hakim Atek (c) Pierre Kitmacher`, so a named photographer
+  holds the copyright. John Chisholm's is his UT Austin directory headshot, which carries no stated
+  credit. Neither source page states reuse terms, and neither the photographer nor the institutions
+  were asked. Crediting Pierre Kitmacher visibly may be required. Confirm with both subjects and
+  replace or remove on request. Sources are in `images/CREDITS.md`.
