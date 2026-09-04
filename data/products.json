@@ -1,57 +1,57 @@
 [
-  {
-    "name": "Drizzled NIRCam mosaics, 9 filters",
-    "description": "Drizzled multi-filter NIRCam mosaics of the GLIMPSE field on Abell S1063.",
-    "format": null,
-    "version": null,
-    "size": null,
-    "url": null,
-    "notes": "Committed in the proposal for delivery 3 months after observation.",
-    "release": "DR1",
-    "source": "Proposal data-management plan"
-  },
-  {
-    "name": "ICL and BCG subtracted NIRCam mosaics",
-    "description": "NIRCam mosaics with the intracluster light and brightest cluster galaxy light subtracted (GALFIT, following Shipley et al. 2018).",
-    "format": null,
-    "version": null,
-    "size": null,
-    "url": null,
-    "notes": "Committed in the proposal for delivery 6 months after observation.",
-    "release": "DR2",
-    "source": "Proposal data-management plan"
-  },
-  {
-    "name": "HST mosaics of the field",
-    "description": "HST mosaics of the Abell S1063 field, combined with the GLIMPSE NIRCam imaging.",
-    "format": null,
-    "version": null,
-    "size": null,
-    "url": null,
-    "notes": "Not a proposal deliverable. The survey overview paper (arXiv:2511.07542) states that the first public data release includes reduced JWST and HST mosaics, photometric catalogs, and gravitational lensing models.",
-    "release": "DR2",
-    "source": "Survey overview paper (arXiv:2511.07542)"
-  },
-  {
-    "name": "PSF-matched photometric catalog with photometric redshifts",
-    "description": "PSF-matched multi-wavelength photometric catalog with EAZY / Bagpipes / BEAGLE photometric redshifts and SED fits, plus morphology.",
-    "format": null,
-    "version": null,
-    "size": null,
-    "url": null,
-    "notes": "Committed in the proposal for delivery 9 months after observation.",
-    "release": "DR3",
-    "source": "Proposal data-management plan"
-  },
-  {
-    "name": "Gravitational lens models: deflection, convergence and shear maps with uncertainties",
-    "description": "Lens-model deflection, convergence, and shear maps of Abell S1063, with uncertainties.",
-    "format": null,
-    "version": null,
-    "size": null,
-    "url": null,
-    "notes": "Committed in the proposal for delivery 9 months after observation.",
-    "release": "DR3",
-    "source": "Proposal data-management plan"
-  }
+ {
+  "name": "Drizzled NIRCam mosaics, 9 filters",
+  "description": "Drizzled multi-filter NIRCam mosaics of the GLIMPSE field on Abell S1063.",
+  "format": null,
+  "version": null,
+  "size": null,
+  "url": null,
+  "notes": "Committed in the proposal for delivery 3 months after observation.",
+  "release": "DR1",
+  "source": "Proposal data-management plan"
+ },
+ {
+  "name": "ICL and BCG subtracted NIRCam mosaics",
+  "description": "NIRCam mosaics with the intracluster light and brightest cluster galaxy light subtracted (GALFIT, following Shipley et al. 2018).",
+  "format": null,
+  "version": null,
+  "size": null,
+  "url": null,
+  "notes": "Committed in the proposal for delivery 6 months after observation.",
+  "release": "DR2",
+  "source": "Proposal data-management plan"
+ },
+ {
+  "name": "HST mosaics of the field",
+  "description": "HST mosaics of the Abell S1063 field, combined with the GLIMPSE NIRCam imaging.",
+  "format": null,
+  "version": null,
+  "size": null,
+  "url": null,
+  "notes": "Not a proposal deliverable. The survey overview paper (arXiv:2511.07542) states that the first public data release includes reduced JWST and HST mosaics, photometric catalogs, and gravitational lensing models.",
+  "release": null,
+  "source": "Survey overview paper (arXiv:2511.07542)"
+ },
+ {
+  "name": "PSF-matched photometric catalog with photometric redshifts",
+  "description": "PSF-matched multi-wavelength photometric catalog with EAZY / Bagpipes / BEAGLE photometric redshifts and SED fits, plus morphology.",
+  "format": null,
+  "version": null,
+  "size": null,
+  "url": null,
+  "notes": "Committed in the proposal for delivery 9 months after observation.",
+  "release": "DR3",
+  "source": "Proposal data-management plan"
+ },
+ {
+  "name": "Gravitational lens models: deflection, convergence and shear maps with uncertainties",
+  "description": "Lens-model deflection, convergence, and shear maps of Abell S1063, with uncertainties.",
+  "format": null,
+  "version": null,
+  "size": null,
+  "url": null,
+  "notes": "Committed in the proposal for delivery 9 months after observation.",
+  "release": "DR3",
+  "source": "Proposal data-management plan"
+ }
 ]

@@ -13,10 +13,11 @@ primary source.
 - **F150W exposure time ambiguity.** The proposal PDF gives two different values in
   different sections (23 h on p.2, 20 h on p.14). The site states this range and notes
   the internal inconsistency neutrally rather than picking one number.
-- **Institutional affiliations for most of the 47-person team roster.** Confirmed only
-  for Atek, Chisholm, Kokorev, Fujimoto, and Basu. The remaining 42 members render
-  without an institution line rather than a guess. Update `team/members.json` as
-  affiliations are confirmed.
+- **Team affiliations are as printed in the survey paper, not necessarily current.**
+  All 47 institutions in `team/members.json` were read from the author block of
+  Atek et al. 2025 (arXiv:2511.07542), so they reflect where each person was when that
+  paper was submitted. Nobody has checked them against current positions. Update
+  `team/members.json` when a member moves.
 - **Public contact address for GLIMPSE / Hakim Atek.** No address is available to
   publish. `team.html` shows a `TBD` placeholder rather than an invented mailto link.
 - **No GLIMPSE logo exists.** None was found in any source, and this build does not
@@ -30,8 +31,11 @@ primary source.
   them.
 - **Secondary press coverage** (AAS Nova items, the Science.org article) is not
   included on `news.html` because those page bodies were not fetched and verified.
-  `news.html` currently shows the five verified releases in FACTS.md's press table
-  (ESA/Webb x2, NASA/STScI, CNRS, Sorbonne Universite).
+- **Duplicate press coverage is collapsed on `news.html` by choice, not by omission.**
+  Three cards are shown. The NASA/STScI release of 2026-06-10 (news-2026-119) covers the
+  same result as the ESA/Webb release weic2610 and was dropped at the team's request, and
+  the CNRS and Sorbonne Universite releases share a headline and date so they were merged
+  into one card that links to both. All of these remain listed in FACTS.md.
 - **Marcie Mun correction.** She is an author of Atek et al. 2026, not of the
   47-author survey paper (Atek et al. 2025, arXiv:2511.07542). She is deliberately
   absent from `team/members.json`, which reflects only the survey paper's roster.
