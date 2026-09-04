@@ -70,8 +70,10 @@ for a new one. Each product has:
 - `url`: leave as `null` until there is a real download link (for example once the
   Zenodo record exists), then paste the link in quotes.
 - `release`: free text, one of `"DR1"`, `"DR2"`, or `"DR3"`.
-- `notes`: kept in the file for maintainers, but **not shown on the page**. The column was
-  dropped because it carried internal provenance detail that readers do not need.
+- `notes`, `source`: kept in the file for maintainers, but **not shown on the page**. Both
+  columns were dropped because they carried internal provenance detail that readers do not
+  need. `source` records which document a row came from, the proposal's data-management plan
+  or the survey overview paper, and that distinction still matters when editing the table.
 
 ## Plugging in the Zenodo DOI once it exists
 
