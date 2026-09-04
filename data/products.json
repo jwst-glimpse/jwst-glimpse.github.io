@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Drizzled NIRCam mosaics, 9 filters",
+    "description": "Drizzled multi-filter NIRCam mosaics of the GLIMPSE field on Abell S1063.",
+    "format": null,
+    "version": null,
+    "size": null,
+    "url": null,
+    "notes": "Committed in the proposal for delivery 3 months after observation.",
+    "release": "DR1"
+  },
+  {
+    "name": "ICL and BCG subtracted NIRCam mosaics",
+    "description": "NIRCam mosaics with the intracluster light and brightest cluster galaxy light subtracted (GALFIT, following Shipley et al. 2018).",
+    "format": null,
+    "version": null,
+    "size": null,
+    "url": null,
+    "notes": "Committed in the proposal for delivery 6 months after observation.",
+    "release": "DR2"
+  },
+  {
+    "name": "HST mosaics of the field",
+    "description": "HST mosaics of the Abell S1063 field, combined with the GLIMPSE NIRCam imaging.",
+    "format": null,
+    "version": null,
+    "size": null,
+    "url": null,
+    "notes": "Committed in the proposal for delivery 6 months after observation.",
+    "release": "DR2"
+  },
+  {
+    "name": "PSF-matched photometric catalog with photometric redshifts",
+    "description": "PSF-matched multi-wavelength photometric catalog with EAZY / Bagpipes / BEAGLE photometric redshifts and SED fits, plus morphology.",
+    "format": null,
+    "version": null,
+    "size": null,
+    "url": null,
+    "notes": "Committed in the proposal for delivery 9 months after observation.",
+    "release": "DR3"
+  },
+  {
+    "name": "Gravitational lens models: deflection, convergence and shear maps with uncertainties",
+    "description": "Lens-model deflection, convergence, and shear maps of Abell S1063, with uncertainties.",
+    "format": null,
+    "version": null,
+    "size": null,
+    "url": null,
+    "notes": "Committed in the proposal for delivery 9 months after observation.",
+    "release": "DR3"
+  },
+  {
+    "name": "NIRSpec spectra from GLIMPSE-D (DD 9223)",
+    "description": "JWST/NIRSpec multi-object spectroscopy from the GLIMPSE-D DDT program (DD 9223).",
+    "format": null,
+    "version": null,
+    "size": null,
+    "url": null,
+    "notes": "Ancillary spectroscopic program, not part of the DR1/DR2/DR3 imaging schedule.",
+    "release": "DR3"
+  }
+]

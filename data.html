@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Release | GLIMPSE</title>
+<meta name="description" content="Planned data products and release schedule for JWST GLIMPSE (GO 3293), the ultra-deep NIRCam survey of Abell S1063. The first public release is in preparation.">
+
+<meta property="og:title" content="Data Release | GLIMPSE">
+<meta property="og:description" content="Planned data products and release schedule for JWST GLIMPSE (GO 3293), the ultra-deep NIRCam survey of Abell S1063. The first public release is in preparation.">
+<meta property="og:image" content="https://jwst-glimpse.github.io/images/glimpse-hero.jpg">
+<meta property="og:url" content="https://jwst-glimpse.github.io/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="wordmark">
+      <span class="name">GLIMPSE</span>
+      <span class="sub">JWST GO 3293</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      Menu
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="survey.html" data-page="survey">Survey</a></li>
+        <li><a href="data.html" data-page="data" aria-current="page">Data</a></li>
+        <li><a href="publications.html" data-page="publications">Publications</a></li>
+        <li><a href="team.html" data-page="team">Team</a></li>
+        <li><a href="news.html" data-page="news">News</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<h1>Data Release</h1>
+<p class="text-faint">Plans for the public release of GLIMPSE imaging, catalogs, and lens models,
+and how to cite the survey once you use them.</p>
+
+<section aria-labelledby="status-heading">
+  <div class="notice">
+    <p><strong>The first public data release is in preparation.</strong> The products listed
+    below are the planned contents of the release, drawn from commitments made in the accepted
+    JWST proposal. Download links will be added to this page when the Zenodo record is
+    published. No release date is set.</p>
+  </div>
+</section>
+
+<section aria-labelledby="get-data-heading">
+  <h2 id="get-data-heading">How to get the data</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Zenodo (primary distribution)</h3>
+      <p>DOI: <span class="tbd">TBD</span></p>
+      <p>The Zenodo record for the GLIMPSE data release has not been published yet.</p>
+      <button class="btn" type="button" disabled aria-disabled="true">Link pending</button>
+    </div>
+    <div class="card">
+      <h3>MAST</h3>
+      <p>GLIMPSE has an exclusive access period of zero months, so the raw and
+      pipeline-processed exposures are already public on MAST.</p>
+      <p><a href="https://www.stsci.edu/jwst-program-info/program/?program=3293">STScI program page (GO 3293)</a></p>
+      <p><a href="https://mast.stsci.edu/">mast.stsci.edu</a></p>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="products-heading">
+  <h2 id="products-heading">Data products</h2>
+  <p>This table lists the products committed to in the accepted proposal, seeded from its
+  data-management plan. Actual release contents may differ once the reduction and analysis are
+  final. Format, version, size, and download link are shown as <span class="tbd">TBD</span> until
+  the release exists. This table is rendered from <code>data/products.json</code>, a single file
+  maintainers can edit to update it.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Product</th>
+          <th scope="col">Description</th>
+          <th scope="col">Format</th>
+          <th scope="col">Version</th>
+          <th scope="col">Size</th>
+          <th scope="col">Download</th>
+          <th scope="col">Notes</th>
+        </tr>
+      </thead>
+      <tbody id="data-products-body">
+        <tr><td colspan="7">Loading data products...</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section aria-labelledby="history-heading">
+  <h2 id="history-heading">Release history</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Release</th>
+          <th scope="col">Planned contents</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>DR1</td>
+          <td>Drizzled multi-filter NIRCam mosaics.</td>
+          <td><span class="pill pill-inprep">In preparation</span></td>
+        </tr>
+        <tr>
+          <td>DR2</td>
+          <td>ICL and BCG subtracted NIRCam mosaics (GALFIT, following Shipley et al. 2018), and
+          HST mosaics of the field.</td>
+          <td><span class="pill pill-inprep">In preparation</span></td>
+        </tr>
+        <tr>
+          <td>DR3</td>
+          <td>PSF-matched multi-wavelength photometric catalogs with EAZY, Bagpipes, and BEAGLE
+          photometric redshifts and SED fits, morphology, and gravitational lens-model deflection,
+          convergence, and shear maps with uncertainties.</td>
+          <td><span class="pill pill-inprep">In preparation</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <small>Timing and contents per the accepted proposal's data-management plan: DR1 at 3 months
+  after observation, DR2 at 6 months, DR3 at 9 months. All deliverables were committed to MAST.</small>
+</section>
+
+<section aria-labelledby="using-heading">
+  <h2 id="using-heading">Using the data</h2>
+
+  <h3>Citation</h3>
+  <p>To cite the survey, cite Atek et al. 2025
+  (<a href="https://arxiv.org/abs/2511.07542">arXiv:2511.07542</a>) and, once it exists, the
+  Zenodo DOI for the data release.</p>
+  <div class="copy-block-wrap">
+    <pre class="copy-block" id="bibtex-block">@ARTICLE{2025arXiv251107542A,
+       author = {Atek, Hakim and Chisholm, John and Kokorev, Vasily and Endsley, Ryan and Pan, Richard and Furtak, Lukas and Chemerynska, Iryna and Richard, Johan and Claeyssens, Ad&#233;la&#239;de and Oesch, Pascal and Fujimoto, Seiji and Naidu, Rohan and Korber, Damien and Schaerer, Daniel and Blaizot, Jeremy and Rosdahl, Joki and Adamo, Angela and Asada, Yoshihisa and Basu, Arghyadeep and Beauchesne, Benjamin and Berg, Danielle and Bezanson, Rachel and Bouwens, Rychard and Brammer, Gabriel and Dessauges-Zavadsky, Miroslava and Ellien, Ama&#235;l and Ezziati, Meriam and Fei, Qinyue and Goovaerts, Ilias and Heurtier, Sylvain and Hsiao, Tiger Yu-Yang and Jecmen, Michelle and Khullar, Gourav and Kneib, Jean-Paul and Labb&#233;, Ivo and Leclercq, Floriane and Marques-Chaves, Rui and Mason, Charlotte and McQuinn, Kristen B. W. and Mu&#241;oz, Julian B. and Natarajan, Priyamvada and Saldana-Lopez, Alberto and Stephenson, Mabel G. and Trebitsch, Maxime and Volonteri, Marta and Weibel, Andrea and Zitrin, Adi},
+        title = "{JWST's GLIMPSE: an overview of the deepest probe of early galaxy formation and cosmic reionization}",
+      journal = {arXiv e-prints},
+         year = {2025},
+        month = {nov},
+       eprint = {2511.07542},
+          doi = {10.48550/arXiv.2511.07542},
+       adsurl = {https://ui.adsabs.harvard.edu/abs/2025arXiv251107542A},
+      adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}</pre>
+    <button class="btn-copy" type="button" data-copy-target="bibtex-block">Copy BibTeX</button>
+  </div>
+
+  <h3>Suggested acknowledgement</h3>
+  <p>This is a suggested wording, not an official requirement:</p>
+  <div class="copy-block-wrap">
+    <pre class="copy-block" id="ack-block">This work is based on observations made with the NASA/ESA/CSA James Webb Space Telescope, associated with JWST GO program 3293 (GLIMPSE).</pre>
+    <button class="btn-copy" type="button" data-copy-target="ack-block">Copy text</button>
+  </div>
+
+  <h3>Data policy</h3>
+  <p>GLIMPSE has an exclusive access period of zero months, so all GLIMPSE observations are
+  public as soon as they are taken.</p>
+</section>
+
+<section aria-labelledby="questions-heading">
+  <h2 id="questions-heading">Questions</h2>
+  <p>For questions about the data release, see the contact information on the
+  <a href="team.html">Team</a> page.</p>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>About GLIMPSE</h4>
+        <p>GLIMPSE is JWST GO program 3293, an ultra-deep NIRCam imaging survey of the lensing
+        cluster Abell S1063. Co-PIs: Hakim Atek (CNRS / Institut d'Astrophysique de Paris) and
+        John Chisholm (University of Texas at Austin).</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://www.stsci.edu/jwst-program-info/program/?program=3293">STScI program page</a></li>
+          <li><a href="https://mast.stsci.edu/">MAST portal</a></li>
+          <li><a href="https://esawebb.org/images/potm2505a/">ESA/Webb image release</a></li>
+          <li><a href="https://github.com/jwst-glimpse/jwst-glimpse.github.io">GitHub repository</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Credits and license</h4>
+        <p>Site text is licensed CC BY 4.0. Imagery is credited individually on each page; see
+        <a href="images/CREDITS.md">images/CREDITS.md</a> for full credit lines and sources.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Last updated: 2026-09-04
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+name: Update publications
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC.
+    - cron: "0 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-pubs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run update_pubs.py
+        env:
+          ADS_API_TOKEN: ${{ secrets.ADS_API_TOKEN }}
+        run: python3 scripts/update_pubs.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- pubs/pubs.json pubs/candidates.json; then
+            echo "No changes to publication data."
+          else
+            git add pubs/pubs.json pubs/candidates.json
+            git commit -m "Update publications from ADS"
+            git push
+          fi

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Survey | GLIMPSE</title>
+<meta name="description" content="Program summary, target, observing strategy, and science goals of GLIMPSE, JWST GO 3293, an ultra-deep NIRCam imaging survey of the lensing cluster Abell S1063.">
+
+<meta property="og:title" content="Survey | GLIMPSE">
+<meta property="og:description" content="Program summary, target, observing strategy, and science goals of GLIMPSE, JWST GO 3293, an ultra-deep NIRCam imaging survey of the lensing cluster Abell S1063.">
+<meta property="og:image" content="https://jwst-glimpse.github.io/images/glimpse-hero.jpg">
+<meta property="og:url" content="https://jwst-glimpse.github.io/survey.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="wordmark">
+      <span class="name">GLIMPSE</span>
+      <span class="sub">JWST GO 3293</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+      Menu
+    </button>
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html" data-page="home">Home</a></li>
+        <li><a href="survey.html" data-page="survey" aria-current="page">Survey</a></li>
+        <li><a href="data.html" data-page="data">Data</a></li>
+        <li><a href="publications.html" data-page="publications">Publications</a></li>
+        <li><a href="team.html" data-page="team">Team</a></li>
+        <li><a href="news.html" data-page="news">News</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<!-- CONTENT -->
+<h1>Survey</h1>
+<p>GLIMPSE is JWST GO program 3293, "JWST's GLIMPSE: gravitational lensing &amp; NIRCam imaging to
+probe early galaxy formation and sources of reionization." This page summarizes the program, the
+target, the observing strategy, and the science goals as committed in the accepted proposal.</p>
+
+<section id="program-summary">
+<h2>Program summary</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Program ID</td><td>JWST GO 3293</td></tr>
+<tr><td>Cycle</td><td>Cycle 2</td></tr>
+<tr><td>Leadership</td><td>Co-PI Hakim Atek (CNRS / Institut d'Astrophysique de Paris) and Co-PI John Chisholm (University of Texas at Austin)</td></tr>
+<tr><td>Instrument</td><td>JWST/NIRCam (imaging)</td></tr>
+<tr><td>Allocation</td><td>120.1 h science time, 147.8 h charged time</td></tr>
+<tr><td>Exclusive access period</td><td>0 months (data are public immediately)</td></tr>
+<tr><td>Proposal size</td><td>Large</td></tr>
+</tbody>
+</table>
+</div>
+<small>Source: JWST proposal PDF, cover page (p.0), for program ID, cycle, leadership, instrument,
+allocation, exclusive access period, and proposal size.</small>
+</section>
+
+<section id="target">
+<h2>Target</h2>
+<p>The survey targets <strong>Abell S1063</strong> (also known as AS1063, ACO S 1063, or
+RXC J2248.7-4431), a Hubble Frontier Fields cluster at redshift z = 0.348. The NIRCam pointing is
+centered on the proposal target ACO-S-1063, at RA 22 48 52.19, Dec -44 31 52.1.</p>
+<p>Abell S1063 was chosen for its regular morphology, a compact high-magnification region that fits
+within a single NIRCam module, and the best-constrained lens model among the Frontier Fields
+clusters, built on more than 70 spectroscopic multiple images from VLT/MUSE.</p>
+<p>Total survey area: <span class="tbd">TBD</span>. No source states an explicit footprint area in
+arcmin<sup>2</sup> for the imaging. The one area figure that is confirmed is the effective
+source-plane area at z~6, about 4.4 arcmin<sup>2</sup>, which is a lensing-corrected quantity, not
+the sky footprint.</p>
+
+<div class="card-grid">
+<div class="card">
+<img src="images/as1063-hst.jpg" alt="HST Frontier Fields mosaic of Abell S1063" loading="lazy">
+<p><small>Credit: NASA, ESA, and J. Lotz (STScI). HST Frontier Fields image, not JWST.</small></p>
+</div>
+<div class="card">
+<img src="images/as1063-nircam.jpg" alt="JWST/NIRCam view of Abell S1063 with lensing arcs" loading="lazy">
+<p><small>Credit: NASA, ESA, CSA, V. Kokorev (University of Texas at Austin), A. Pagan (STScI).</small></p>
+</div>
+</div>
+<p><small>HST image and credit from esahubble.org/images/heic1615a/. JWST/NIRCam image and credit
+from esawebb.org/news/weic2610/ (image weic2610c).</small></p>
+</section>
+
+<section id="observations">
+<h2>Observations</h2>
+<p>GLIMPSE observes Abell S1063 in nine NIRCam filters, seven broadband and two medium-band, with
+wavelength coverage from 0.8 to 5 microns. Readout used the DEEP8 pattern with a 4-point primary
+plus 4-point subpixel INTRAMODULEBOX dither.</p>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Type</th>
+<th>Exposure</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>F090W</td><td>Broad</td><td>39 h</td></tr>
+<tr><td>F115W</td><td>Broad</td><td>39 h</td></tr>
+<tr><td>F150W</td><td>Broad</td><td>~20-23 h <sup>1</sup></td></tr>
+<tr><td>F200W</td><td>Broad</td><td>19 h</td></tr>
+<tr><td>F277W</td><td>Broad</td><td>23 h</td></tr>
+<tr><td>F356W</td><td>Broad</td><td>19 h</td></tr>
+<tr><td>F410M</td><td>Medium</td><td>16 h</td></tr>
+<tr><td>F444W</td><td>Broad</td><td>39 h</td></tr>
+<tr><td>F480M</td><td>Medium</td><td>23 h</td></tr>
+</tbody>
+</table>
+</div>
+<p><small>Source: JWST proposal PDF, pp.2, 13-15. F200W and F356W were exposed in a paired
+observation (19 h each); F444W was exposed in parallel with F115W (39 h).</small></p>
+<p><small><sup>1</sup> The proposal PDF states two different values for the F150W exposure time in
+different sections (23 h on p.2, 20 h on p.14). The document is internally inconsistent, so this
+page states the range rather than choosing one figure.</small></p>
+</section>
+
+<section id="depth">
+<h2>Depth</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Proposal-predicted 5-sigma depth</td><td>30.6-31.0 AB</td></tr>
+<tr><td>Achieved 5-sigma depth</td><td>30.9 AB, measured in a 0.2 arcsec diameter aperture</td></tr>
+<tr><td>Intrinsic (de-lensed) depth</td><td>beyond 33 AB</td></tr>
+</tbody>
+</table>
+</div>
+<p><small>Source: proposal PDF (predicted depth) and Atek et al. 2025, arXiv:2511.07542, abstract
+(achieved depth, aperture, de-lensed depth).</small></p>
+</section>
+
+<section id="science-goals">
+<h2>Science goals</h2>
+<ol>
+<li>Measure the abundance of faint galaxies at z&gt;6 down to M_UV ~ -12, establishing the first
+observational benchmarks for galaxy-formation and stellar-feedback models in this regime.</li>
+<li>Constrain the contribution of the faintest galaxies to cosmic reionization.</li>
+<li>Probe the typical, not just record-breaking, galaxy population during the Dark Ages at
+z&gt;10.</li>
+</ol>
+<blockquote>We will detect galaxies at z&gt;6 more than a thousand times fainter than the Milky
+Way.</blockquote>
+<p><small>Source: JWST proposal abstract, paraphrased goals and quoted line.</small></p>
+</section>
+
+<section id="ancillary-data">
+<h2>Ancillary data</h2>
+<ul>
+<li>HST imaging from the Hubble Frontier Fields program, and HST FLASHLIGHTS (PID 15936)</li>
+<li>VLT/MUSE spectroscopy, more than 70 multiple images with spectroscopic redshifts</li>
+<li>JWST/NIRSpec medium-resolution multi-object spectroscopy from the GLIMPSE-D / DDT program</li>
+<li>Archival Chandra X-ray, ALMA, and VLA radio coverage of the cluster</li>
+</ul>
+<p><small>Source: proposal PDF p.12; Atek et al. 2025, arXiv:2511.07542, abstract.</small></p>
+</section>
+
+<section id="related-programs">
+<h2>Related programs</h2>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Program</th>
+<th>Type</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GO 1840</td>
+<td>JWST Cycle 1 NIRCam</td>
+<td>Earlier imaging of Abell S1063, used jointly with GLIMPSE.</td>
+</tr>
+<tr>
+<td>DD 9223, "GLIMPSE-D"</td>
+<td>JWST Cycle 3 DD Discovery, NIRSpec MSA G395M</td>
+<td>"Let there be Light: Directly Witnessing the Birth of Metal-Free, Pop III Stars in an
+Ultra-Faint Galaxy at z=6.5." PI Seiji Fujimoto (University of Toronto); Co-I John Chisholm.
+30.1 h science / 38.7 h charged.</td>
+</tr>
+<tr>
+<td>VLT/MUSE DDT follow-up</td>
+<td>Ground-based</td>
+<td>10 of 12 OBs taken.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><small>Source: Slack; Yu et al. 2026 abstract (GO 1840); APT XML 9223.xml and ADS
+2025jwst.prop.9223F (DD 9223); Slack #muse (VLT/MUSE).</small></p>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>About GLIMPSE</h4>
+        <p>GLIMPSE is JWST GO program 3293, an ultra-deep NIRCam imaging survey of the lensing
+        cluster Abell S1063. Co-PIs: Hakim Atek (CNRS / Institut d'Astrophysique de Paris) and
+        John Chisholm (University of Texas at Austin).</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="https://www.stsci.edu/jwst-program-info/program/?program=3293">STScI program page</a></li>
+          <li><a href="https://mast.stsci.edu/">MAST portal</a></li>
+          <li><a href="https://esawebb.org/images/potm2505a/">ESA/Webb image release</a></li>
+          <li><a href="https://github.com/jwst-glimpse/jwst-glimpse.github.io">GitHub repository</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Credits and license</h4>
+        <p>Site text is licensed CC BY 4.0. Imagery is credited individually on each page; see
+        <a href="images/CREDITS.md">images/CREDITS.md</a> for full credit lines and sources.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Last updated: 2026-09-04
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
