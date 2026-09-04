@@ -72,12 +72,29 @@ carries a named photographer credit (Pierre Kitmacher, for Sorbonne Universite),
 claim than the UT Austin directory photo, so it is the first one to replace if Hakim Atek supplies a
 picture of his own.
 
-## glimpse-logo.png
+## GLIMPSE logo
 
-- Byte size: 15,297 bytes (382 x 121 px, RGBA)
-- The GLIMPSE collaboration's own wordmark, the white-on-dark variant. Taken from the copy held at
-  `sfseiji.github.io/project_logo/jwst/glimpse2.png`, which came from the collaboration rather than
-  from a public release page, so no original designer or licence is recorded.
-- The source file has the wordmark flattened onto an opaque black rectangle. It was un-matted
-  against black (alpha set from pixel luminance, colour un-multiplied) to restore the transparency
-  the flattened file lost, and the transparent margin was trimmed. No colours were changed.
+The collaboration's official logo, obtained from the GLIMPSE team's own "Logos" folder on Google
+Drive, shared by John Chisholm in the team Slack on 2026-01-26:
+https://drive.google.com/drive/folders/12d68l-KSbELFamzd9wAmjy_JFi35rTzT
+
+The four originals are kept verbatim in `images/logo/`, each 6584 x 2321 px with transparency:
+
+| File | Use |
+|---|---|
+| `Glimpse-JWST-Logo-Color-Light.png` | colour logo for dark backgrounds (white lettering) |
+| `Glimpse-JWST-Logo-Color-Dark.png` | colour logo for light backgrounds (navy lettering) |
+| `Glimpse-JWST-Logo-Grayscale-Light.png` | greyscale for dark backgrounds |
+| `Glimpse-JWST-Logo-Grayscale-Dark.png` | greyscale for light backgrounds |
+
+Derived from those, and safe to regenerate at any time:
+
+- `glimpse-logo.png` (431 x 136) is the header wordmark: the Color-Light original, transparent
+  margin trimmed, resized. No colours were changed.
+- `favicon-32.png`, `favicon-64.png` and `apple-touch-icon.png` are the gear mark alone, cut from
+  the left of the same logo at the first empty column between the mark and the wordmark. They sit
+  on the site background colour rather than on transparency, so they stay legible whether the
+  browser draws a light or a dark tab bar.
+
+No designer or licence is recorded in the Drive folder. It is the collaboration's own mark being
+used on the collaboration's own site.

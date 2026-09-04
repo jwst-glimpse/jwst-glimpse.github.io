@@ -14,6 +14,18 @@ nothing to compile or upload separately. If something looks wrong after a push, 
 the "Actions" tab of the repository on GitHub for errors, and check that you edited the
 file you meant to (paths are listed below).
 
+## The GLIMPSE logo
+
+The four official logo files live in `images/logo/`, straight from the collaboration's own Logos
+folder on Google Drive, at full resolution (6584 x 2321, transparent background):
+
+- `Glimpse-JWST-Logo-Color-Light.png` and `-Grayscale-Light.png` for dark backgrounds
+- `Glimpse-JWST-Logo-Color-Dark.png` and `-Grayscale-Dark.png` for light backgrounds
+
+Use these for talks and posters rather than pulling a screenshot off the website. The site's own
+header logo (`images/glimpse-logo.png`) and the favicons are generated from the Color-Light file,
+so if the logo ever changes, replace the originals and regenerate those.
+
 ## How to add a new paper
 
 The Publications page lists **papers led by the GLIMPSE team**. Papers by other groups
