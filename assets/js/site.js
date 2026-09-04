@@ -325,7 +325,7 @@
         var products = Array.isArray(data) ? data : data.products || [];
         if (!products.length) {
           tbody.innerHTML =
-            '<tr><td colspan="8">No products listed yet.</td></tr>';
+            '<tr><td colspan="7">No products listed yet.</td></tr>';
           return;
         }
         tbody.innerHTML = products
@@ -351,9 +351,6 @@
               (p.url
                 ? '<a href="' + escapeHtml(p.url) + '">Download</a>'
                 : tbdPill()) +
-              "</td>" +
-              "<td>" +
-              escapeHtml(p.notes || "") +
               "</td>" +
               "<td>" +
               escapeHtml(p.source || "") +

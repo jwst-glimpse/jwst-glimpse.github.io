@@ -69,7 +69,9 @@ for a new one. Each product has:
   value; the site displays a "TBD" marker automatically for anything null.
 - `url`: leave as `null` until there is a real download link (for example once the
   Zenodo record exists), then paste the link in quotes.
-- `notes`, `release`: free text, and one of `"DR1"`, `"DR2"`, or `"DR3"`.
+- `release`: free text, one of `"DR1"`, `"DR2"`, or `"DR3"`.
+- `notes`: kept in the file for maintainers, but **not shown on the page**. The column was
+  dropped because it carried internal provenance detail that readers do not need.
 
 ## Plugging in the Zenodo DOI once it exists
 
