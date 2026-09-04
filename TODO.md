@@ -39,3 +39,16 @@ primary source.
 - **Marcie Mun correction.** She is an author of Atek et al. 2026, not of the
   47-author survey paper (Atek et al. 2025, arXiv:2511.07542). She is deliberately
   absent from `team/members.json`, which reflects only the survey paper's roster.
+- **Team portraits are used without an explicit licence.** The Co-PI headshots come from
+  institutional directory pages that state no reuse terms. They are their own institutional
+  photographs being shown on their own collaboration site, which is normal practice, but nobody has
+  asked them. Confirm with Hakim Atek and John Chisholm, and swap in a photo they supply if they
+  prefer one. See `images/CREDITS.md` for the exact sources.
+- **No portrait for Hakim Atek yet.** The best verified photo found is the Sorbonne Universite
+  portrait at https://www.sorbonne-universite.fr/en/portraits/hakim-atek , which the page labels
+  `Hakim Atek (c) Pierre Kitmacher` with no reuse licence, so it was deliberately not published
+  here. It is also a neutral, arms-folded portrait rather than the friendly headshot wanted. His
+  personal site hakimatek.com is dead (DNS does not resolve), the IAP directory and the CNRS pages
+  carry no photo of him, and the only other verified image (a 200x200 candid on savoirs.ens.fr) is
+  too low quality. The simplest fix is to ask him for a headshot, or to get clearance from Sorbonne
+  Universite communications or from Pierre Kitmacher.

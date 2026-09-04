@@ -973,3 +973,48 @@ body.has-lightbox {
     padding-bottom: 0.75rem;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/* Leadership cards with a square portrait                             */
+/* A card with no portrait simply renders as text, so a missing photo  */
+/* degrades cleanly rather than leaving a gap.                         */
+/* ------------------------------------------------------------------ */
+
+.leadership-grid .card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.lead-photo {
+  flex: 0 0 auto;
+  width: 96px;
+  height: 96px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+.lead-body {
+  min-width: 0;
+}
+
+.lead-body h3 {
+  margin: 0 0 2px;
+}
+
+.lead-body .team-role {
+  margin-bottom: 2px;
+}
+
+.lead-body .team-inst {
+  margin: 0;
+}
+
+@media (max-width: 460px) {
+  .leadership-grid .card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+}

@@ -52,3 +52,16 @@ They carry the same credit and license as glimpse-hero.jpg above.
 - favicon-64.png: 18,756 bytes, 64 x 64 px
 - favicon-32.png: 11,687 bytes, 32 x 32 px
 - apple-touch-icon.png: 76,195 bytes, 180 x 180 px
+
+## Team portraits
+
+These are photographs of people, not CC BY 4.0 observatory imagery, so they are listed separately.
+
+| File | Bytes | Subject | Source page | Stated licence |
+|---|---|---|---|---|
+| `team-chisholm.jpg` | 42932 | John Chisholm, Co-PI | https://astronomy.utexas.edu/directory/john-chisholm (image served from `https://directory.cns.utexas.edu/sites/default/files/2023-01/astronomy%2C%20John%20Chisholm%20Directory.jpg`) | None stated on the page |
+
+The source pages carry no licence or reuse statement, so these portraits are used on the
+understanding that they are the subject's own institutional headshot being reused on their own
+collaboration's website. Confirm with each person, and replace with a photo they supply if they
+prefer. Remove any portrait on request.
