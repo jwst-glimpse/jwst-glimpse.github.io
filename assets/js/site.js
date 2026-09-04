@@ -473,6 +473,99 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /* Lightbox for zoomable figures                                       */
+  /*                                                                     */
+  /* Any <button class="zoom-trigger"> wrapping an <img> opens that image */
+  /* full size. The caption comes from data-caption, the full-resolution  */
+  /* link from data-source. Nothing here runs on pages with no triggers.  */
+  /* ------------------------------------------------------------------ */
+  function initLightbox() {
+    var triggers = document.querySelectorAll(".zoom-trigger");
+    if (!triggers.length) return;
+
+    var lastFocused = null;
+
+    var box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-label", "Enlarged image");
+    box.hidden = true;
+    box.innerHTML =
+      '<button type="button" class="lightbox-close" aria-label="Close enlarged image">' +
+      "Close</button>" +
+      '<figure class="lightbox-figure">' +
+      '<img class="lightbox-img" alt="">' +
+      '<figcaption class="lightbox-caption"></figcaption>' +
+      "</figure>";
+    document.body.appendChild(box);
+
+    var img = box.querySelector(".lightbox-img");
+    var caption = box.querySelector(".lightbox-caption");
+    var closeBtn = box.querySelector(".lightbox-close");
+
+    function open(trigger) {
+      var source = trigger.querySelector("img");
+      if (!source) return;
+      lastFocused = trigger;
+      img.src = source.currentSrc || source.src;
+      img.alt = source.alt || "";
+
+      var text = trigger.getAttribute("data-caption") || source.alt || "";
+      var href = trigger.getAttribute("data-source");
+      caption.textContent = text;
+      if (href) {
+        var link = document.createElement("a");
+        link.href = href;
+        link.target = "_blank";
+        link.rel = "noopener";
+        link.textContent = "Full resolution and image release";
+        caption.appendChild(document.createElement("br"));
+        caption.appendChild(link);
+      }
+
+      box.hidden = false;
+      document.body.classList.add("has-lightbox");
+      closeBtn.focus();
+    }
+
+    function close() {
+      box.hidden = true;
+      document.body.classList.remove("has-lightbox");
+      img.removeAttribute("src");
+      caption.textContent = "";
+      if (lastFocused) lastFocused.focus();
+      lastFocused = null;
+    }
+
+    Array.prototype.forEach.call(triggers, function (trigger) {
+      trigger.addEventListener("click", function () {
+        open(trigger);
+      });
+    });
+
+    closeBtn.addEventListener("click", close);
+
+    /* Clicking the backdrop closes; clicking the image itself does not. */
+    box.addEventListener("click", function (event) {
+      if (event.target === box || event.target === box.querySelector(".lightbox-figure")) {
+        close();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (box.hidden) return;
+      if (event.key === "Escape") {
+        close();
+      } else if (event.key === "Tab") {
+        /* Only the close button is focusable while open, so keep focus there. */
+        event.preventDefault();
+        closeBtn.focus();
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------ */
   /* Init on DOM ready                                                   */
   /* ------------------------------------------------------------------ */
   function init() {
@@ -481,6 +574,7 @@
     initDataProducts();
     initTeam();
     initCopyButtons();
+    initLightbox();
   }
 
   if (document.readyState === "loading") {
