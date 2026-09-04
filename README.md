@@ -16,6 +16,10 @@ file you meant to (paths are listed below).
 
 ## How to add a new paper
 
+The Publications page lists **papers led by the GLIMPSE team**. Papers by other groups
+that use the public GLIMPSE data are deliberately left off, so the list stays a record
+of the collaboration's own output.
+
 Publications are listed automatically from `pubs/pubs.json`, which is generated from
 `pubs/bibcodes.txt`. You do not need to edit `pubs/pubs.json` by hand.
 
@@ -38,8 +42,9 @@ and Abell S1063 and might belong on the list. It never adds them automatically (
 word "GLIMPSE" also belongs to an older Spitzer survey and to the English word
 "glimpse", so that search is noisy). Instead it writes candidates to
 `pubs/candidates.json`, which is not shown on the website. Check that file
-occasionally; if a listed candidate is a real GLIMPSE paper, add its bibcode to
-`pubs/bibcodes.txt` yourself.
+occasionally; if a listed candidate is a GLIMPSE team paper, add its bibcode to
+`pubs/bibcodes.txt` yourself. Most candidates will be papers by other groups using the
+public data, and those should stay off the list.
 
 ## How to add or edit a data product
 
