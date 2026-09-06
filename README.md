@@ -103,8 +103,16 @@ not sure of the correct wording, leave it as `null`; the site simply omits the
 institution line for anyone whose affiliation is not filled in, rather than showing a
 guess.
 
-The `role` field is `"Co-PI"` for the two Co-PIs and `null` for everyone else. If a
-different formal role needs recording, edit that field the same way.
+The `role` field decides which heading someone appears under on the Team page, and
+each person is listed once only:
+
+- `"Co-PI"` puts them in the Leadership cards at the top.
+- `"Builder"` puts them in the Builders section.
+- `null` puts them in the general Collaboration members grid.
+
+So moving someone between sections is a one-word edit to their `role`. Within each
+section the order follows the order of this file, which is the survey paper's author
+order.
 
 ## Editing ordinary page text
 

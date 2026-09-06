@@ -15,7 +15,7 @@
   --border: #233046;
   --ok: #4ba36a;
   --warn: #c9a227;
-  --maxw: 1120px;
+  --maxw: 1400px;
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-display: Georgia, "Times New Roman", serif;
   --radius: 10px;
@@ -94,6 +94,23 @@ a:hover, a:focus-visible {
   padding-inline: 24px;
 }
 
+@media (min-width: 1200px) {
+  .wrap {
+    padding-inline: 40px;
+  }
+}
+
+/* The column is wide so that images, tables and card grids can breathe. Running
+   prose does not want that much width, so cap the measure where text is read. */
+main.wrap > p,
+main.wrap > section > p,
+main.wrap > section > ol,
+main.wrap > section > ul,
+main.wrap > ol,
+main.wrap > ul {
+  max-width: 78ch;
+}
+
 section {
   margin-block: 2.5rem;
 }
@@ -130,7 +147,7 @@ section {
 }
 
 .wordmark-logo {
-  height: 34px;
+  height: 46px;
   width: auto;
   /* The global img rule caps width at 100%, which would squash a fixed-height
      logo if the header ever ran out of room. object-fit keeps the proportions. */
@@ -140,17 +157,8 @@ section {
 
 @media (max-width: 420px) {
   .wordmark-logo {
-    height: 28px;
+    height: 34px;
   }
-}
-
-.wordmark .sub {
-  font-family: var(--font-body);
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--fg-faint);
-  margin-top: 5px;
 }
 
 .nav-toggle {
@@ -193,7 +201,11 @@ section {
 
 .hero {
   position: relative;
-  min-height: 62vh;
+  /* The banner now runs the full width of the window, and the mosaic behind it
+     is close to square, so a fixed viewport-height crop cuts most of the field
+     away on a wide screen. Tie the height to the width instead, with a floor
+     for phones and a ceiling so the banner cannot swallow a tall monitor. */
+  min-height: clamp(440px, 42vw, 720px);
   display: flex;
   align-items: flex-end;
   background-size: cover;

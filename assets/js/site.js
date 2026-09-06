@@ -372,46 +372,72 @@
     return str.slice(idx + 2) + " " + str.slice(0, idx);
   }
 
+  function memberCard(m, showRole) {
+    var roleHtml =
+      showRole && m.role
+        ? '<div class="team-role">' + escapeHtml(m.role) + "</div>"
+        : "";
+    var instHtml = m.institution
+      ? '<div class="team-inst">' + escapeHtml(m.institution) + "</div>"
+      : "";
+    return (
+      '<div class="team-card">' +
+      '<div class="team-name">' +
+      escapeHtml(displayName(m.name)) +
+      "</div>" +
+      roleHtml +
+      instHtml +
+      "</div>"
+    );
+  }
+
   function initTeam() {
     var grid = document.getElementById("team-grid");
-    if (!grid) return;
+    var builders = document.getElementById("builders-grid");
+    if (!grid && !builders) return;
 
     var MEMBERS_URL = "team/members.json";
 
     fetchJson(MEMBERS_URL)
       .then(function (data) {
         var allMembers = Array.isArray(data) ? data : data.members || [];
-        /* Co-PIs already appear in the Leadership cards above; skip them
-           here so they are not shown twice. */
-        var members = allMembers.filter(function (m) {
-          return !m.role;
-        });
-        if (!members.length) {
-          grid.innerHTML = '<p class="pub-empty">No team members listed.</p>';
-          return;
+
+        /* Each person is listed once, under the most specific heading they
+           have. Co-PIs are in the Leadership cards and builders in their own
+           section, so both are kept out of the general roster below. The
+           order within each group is the survey paper's author order. */
+        function withRole(role) {
+          return allMembers.filter(function (m) {
+            return m.role === role;
+          });
         }
-        grid.innerHTML = members
-          .map(function (m) {
-            var roleHtml = m.role
-              ? '<div class="team-role">' + escapeHtml(m.role) + "</div>"
-              : "";
-            var instHtml = m.institution
-              ? '<div class="team-inst">' + escapeHtml(m.institution) + "</div>"
-              : "";
-            return (
-              '<div class="team-card">' +
-              '<div class="team-name">' +
-              escapeHtml(displayName(m.name)) +
-              "</div>" +
-              roleHtml +
-              instHtml +
-              "</div>"
-            );
-          })
-          .join("");
+
+        if (builders) {
+          var built = withRole("Builder");
+          builders.innerHTML = built.length
+            ? built
+                .map(function (m) {
+                  return memberCard(m, false);
+                })
+                .join("")
+            : '<p class="pub-empty">No builders listed.</p>';
+        }
+
+        if (grid) {
+          var members = allMembers.filter(function (m) {
+            return !m.role;
+          });
+          grid.innerHTML = members.length
+            ? members
+                .map(function (m) {
+                  return memberCard(m, true);
+                })
+                .join("")
+            : '<p class="pub-empty">No team members listed.</p>';
+        }
       })
       .catch(function (err) {
-        showFetchError(grid, MEMBERS_URL, err);
+        showFetchError(grid || builders, MEMBERS_URL, err);
       });
   }
 

@@ -25,7 +25,6 @@
   <div class="wrap">
     <a href="index.html" class="wordmark">
       <img class="wordmark-logo" src="images/glimpse-logo.png" alt="GLIMPSE" width="431" height="136">
-      <span class="sub">JWST GO 3293</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
       Menu
@@ -115,26 +114,28 @@ plus 4-point subpixel INTRAMODULEBOX dither.</p>
 <tr>
 <th>Filter</th>
 <th>Type</th>
-<th>Exposure</th>
+<th>Exposure time (hours)</th>
+<th>5&sigma; depth (AB)</th>
 </tr>
 </thead>
 <tbody>
-<tr><td>F090W</td><td>Broad</td><td>39 h</td></tr>
-<tr><td>F115W</td><td>Broad</td><td>39 h</td></tr>
-<tr><td>F150W</td><td>Broad</td><td>~20-23 h <sup>1</sup></td></tr>
-<tr><td>F200W</td><td>Broad</td><td>19 h, paired with F356W</td></tr>
-<tr><td>F277W</td><td>Broad</td><td>23 h</td></tr>
-<tr><td>F356W</td><td>Broad</td><td>19 h, paired with F200W</td></tr>
-<tr><td>F410M</td><td>Medium</td><td>16 h</td></tr>
-<tr><td>F444W</td><td>Broad</td><td>39 h, in parallel with F115W</td></tr>
-<tr><td>F480M</td><td>Medium</td><td>23 h</td></tr>
+<tr><td>F090W</td><td>Broad</td><td>39.1</td><td>30.85</td></tr>
+<tr><td>F115W</td><td>Broad</td><td>39.1</td><td>30.87</td></tr>
+<tr><td>F150W</td><td>Broad</td><td>22.3</td><td>30.77</td></tr>
+<tr><td>F200W</td><td>Broad</td><td>19.5</td><td>30.82</td></tr>
+<tr><td>F277W</td><td>Broad</td><td>22.3</td><td>30.82</td></tr>
+<tr><td>F356W</td><td>Broad</td><td>19.5</td><td>30.77</td></tr>
+<tr><td>F410M</td><td>Medium</td><td>16.7</td><td>30.07</td></tr>
+<tr><td>F444W</td><td>Broad</td><td>39.1</td><td>30.68</td></tr>
+<tr><td>F480M</td><td>Medium</td><td>22.3</td><td>29.24</td></tr>
 </tbody>
 </table>
 </div>
-<p><small>Several filters share exposures, so the column does not sum to the total allocation.
-F200W and F356W were taken as a paired observation, and F444W was taken in parallel with F115W.</small></p>
-<p><small><sup>1</sup> The proposal quotes both 20 h and 23 h for F150W, so the range is given
-here.</small></p>
+<p><small>Exposure times and depths are Table 1 of the survey paper,
+<a href="https://arxiv.org/abs/2511.07542">Atek et al. (arXiv:2511.07542)</a>. Limiting magnitudes
+are 5&sigma; in a 0.2 arcsec diameter aperture. The exposure column does not sum to the 120 hours of
+science time because the short and long wavelength channels record simultaneously, so F200W pairs
+with F356W and F444W runs alongside F115W.</small></p>
 </section>
 
 <section id="depth">

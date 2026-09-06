@@ -10,9 +10,15 @@ primary source.
 - **Total survey area (imaging footprint, arcmin^2).** No source states this figure.
   Only the effective source-plane area at z~6 (~4.4 arcmin^2) is confirmed and used
   on the site. Do not add a footprint area number without a source.
-- **F150W exposure time ambiguity.** The proposal PDF gives two different values in
-  different sections (23 h on p.2, 20 h on p.14). The site states this range and notes
-  the internal inconsistency neutrally rather than picking one number.
+- ~~**F150W exposure time ambiguity.**~~ Resolved 2026-09-06. The proposal gave 23 h in one
+  section and 20 h in another; Table 1 of the survey paper (arXiv:2511.07542) gives 22.3 h.
+  The Survey page now carries that whole table, exposure times and per-filter 5-sigma
+  depths, in place of the proposal figures.
+- **No published version of the survey paper could be found** (checked 2026-09-06). arXiv
+  has only v1, marked "Submitted to the Open Journal of Astrophysics", with no journal
+  reference or publisher DOI, and Crossref and OpenAlex have no record of it. The site
+  cites it as Atek et al. 2025 (arXiv:2511.07542). If a published version appears, re-check
+  Table 1 before trusting the depths on the Survey page.
 - **Team affiliations are as printed in the survey paper, not necessarily current.**
   All 47 institutions in `team/members.json` were read from the author block of
   Atek et al. 2025 (arXiv:2511.07542), so they reflect where each person was when that
