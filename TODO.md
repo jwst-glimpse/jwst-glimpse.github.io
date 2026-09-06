@@ -22,8 +22,9 @@ primary source.
 - **Team affiliations are as printed in the survey paper, not necessarily current.**
   All 47 institutions in `team/members.json` were read from the author block of
   Atek et al. 2025 (arXiv:2511.07542), so they reflect where each person was when that
-  paper was submitted. Nobody has checked them against current positions. Update
-  `team/members.json` when a member moves.
+  paper was submitted. Nobody has checked the rest against current positions. Update
+  `team/members.json` when a member moves. One entry is deliberately ahead of the paper:
+  Rohan Naidu moved to the University of Hawaii and was updated on 2026-09-06.
 - **Public contact address for GLIMPSE / Hakim Atek.** Still none available, so the
   Contact section was dropped from `team.html` rather than left as a `TBD`. The Data page
   now points questions at the survey leads and the GitHub repository instead. Add the

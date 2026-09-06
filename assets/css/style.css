@@ -258,15 +258,6 @@ section {
   flex-wrap: wrap;
 }
 
-.hero-credit {
-  position: absolute;
-  bottom: 10px;
-  right: 24px;
-  font-size: 11px;
-  color: var(--fg-faint);
-  z-index: 2;
-}
-
 /* ---- Buttons ---- */
 
 .btn {
@@ -992,26 +983,6 @@ body.has-lightbox {
 /* Below about 800px the hero credit, absolutely positioned bottom-right, runs
    into the hero buttons. Put it back in normal flow there so it stacks under
    them instead of across them. */
-@media (max-width: 860px) {
-  /* .hero is a flex container, so a static credit would sit beside .wrap.
-     Let the hero wrap and give the credit a full-width row of its own. */
-  .hero {
-    flex-wrap: wrap;
-  }
-
-  .hero-credit {
-    position: static;
-    flex: 0 0 100%;
-    padding: 0 24px 14px;
-    margin: 0;
-    text-align: left;
-  }
-
-  .hero .wrap {
-    padding-bottom: 0.75rem;
-  }
-}
-
 /* ------------------------------------------------------------------ */
 /* Leadership cards with a square portrait                             */
 /* A card with no portrait simply renders as text, so a missing photo  */
