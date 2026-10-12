@@ -14,6 +14,10 @@
       "title": "A Strongly Lensed Ultra-faint Arc at $z \\approx 10$ with an F200W excess in Abell S1063"
     },
     {
+      "bibcode": "2026arXiv261009014P",
+      "title": "(Monty Python and the) HoliGRALE: A Hybrid GRALE Lens Inversion Methodology Diagnostically Evaluated with Synthetic and Real Data"
+    },
+    {
       "bibcode": "2025arXiv251210839A",
       "title": "Resolving the ionizing photon budget crisis with JWST/NIRCam HII clumping constraints at z=6"
     },
@@ -30,40 +34,40 @@
       "title": "Identifying and Distinguishing Quenching Galaxies with Spatially Resolved Star Formation in the Hubble Frontier Fields"
     },
     {
-      "bibcode": "2025NatAs...9..622O",
-      "title": "Surprisingly faint first galaxies"
-    },
-    {
       "bibcode": "2026arXiv260830079R",
       "title": "Host Dependence and Line-of-Sight Effects on Galaxy-Galaxy Strong Lensing in Clusters"
-    },
-    {
-      "bibcode": "2025arXiv251014953V",
-      "title": "Dark Matter Subhalos and Higher Order Catastrophes in Gravitational Wave Lensing"
-    },
-    {
-      "bibcode": "2026arXiv260719472T",
-      "title": "Cosmic CORALS: Timing the Universe with high-z star clusters"
     },
     {
       "bibcode": "2026arXiv260937188A",
       "title": "MEGATRON: Dwarf Galaxy Quenching in the Epoch of Reionization"
     },
     {
-      "bibcode": "2026JCAP...06..072C",
-      "title": "Nearest neighbour-based statistics for 21 cm-galaxy cross-correlations in the Epoch of Reionization"
+      "bibcode": "2026arXiv260719472T",
+      "title": "Cosmic CORALS: Timing the Universe with high-z star clusters"
+    },
+    {
+      "bibcode": "2025NatAs...9..622O",
+      "title": "Surprisingly faint first galaxies"
     },
     {
       "bibcode": "2026arXiv260905597B",
       "title": "Exploring the dark sector through galaxy dynamics in clusters"
     },
     {
-      "bibcode": "2026arXiv260631583B",
-      "title": "Predisposition of galaxy clusters to producing exotic hyperbolic umbilic lensing configurations"
-    },
-    {
       "bibcode": "2026arXiv260931944B",
       "title": "SLICE: Unveiling the Multi-Component Merging Core of SPT-CLJ1150-2805 Through Strong-Lensing Mass Modelling"
+    },
+    {
+      "bibcode": "2026JCAP...06..072C",
+      "title": "Nearest neighbour-based statistics for 21 cm-galaxy cross-correlations in the Epoch of Reionization"
+    },
+    {
+      "bibcode": "2025arXiv251014953V",
+      "title": "Dark Matter Subhalos and Higher Order Catastrophes in Gravitational Wave Lensing"
+    },
+    {
+      "bibcode": "2026arXiv260631583B",
+      "title": "Predisposition of galaxy clusters to producing exotic hyperbolic umbilic lensing configurations"
     },
     {
       "bibcode": "2024arXiv240305398M",
