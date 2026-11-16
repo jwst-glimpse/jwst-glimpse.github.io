@@ -14,12 +14,16 @@
       "title": "A Strongly Lensed Ultra-faint Arc at $z \\approx 10$ with an F200W excess in Abell S1063"
     },
     {
+      "bibcode": "2026arXiv261037751M",
+      "title": "A GLIMPSE of Dark Matter: JWST Constraints on Early Structure Formation"
+    },
+    {
       "bibcode": "2026arXiv261009014P",
       "title": "(Monty Python and the) HoliGRALE: A Hybrid GRALE Lens Inversion Methodology Diagnostically Evaluated with Synthetic and Real Data"
     },
     {
-      "bibcode": "2026arXiv261037751M",
-      "title": "A GLIMPSE of Dark Matter: JWST Constraints on Early Structure Formation"
+      "bibcode": "2026A&A...715A..57K",
+      "title": "GLIMPSED: Direct evidence for a fast active galactic nucleus-driven outflow from a z = 6.64 little red dot host galaxy"
     },
     {
       "bibcode": "2025arXiv251210839A",
@@ -62,6 +66,10 @@
       "title": "Nearest neighbour-based statistics for 21 cm-galaxy cross-correlations in the Epoch of Reionization"
     },
     {
+      "bibcode": "2026arXiv261108630O",
+      "title": "VENUS: Strong Lens Mass Models and Einstein Radii of 60 Galaxy Clusters"
+    },
+    {
       "bibcode": "2026arXiv260931944B",
       "title": "SLICE: Unveiling the Multi-Component Merging Core of SPT-CLJ1150-2805 Through Strong-Lensing Mass Modelling"
     },
@@ -70,20 +78,12 @@
       "title": "Simulations of Dust Content and Attenuation in $z=5-15$ Galaxies"
     },
     {
-      "bibcode": "2026arXiv260631583B",
-      "title": "Predisposition of galaxy clusters to producing exotic hyperbolic umbilic lensing configurations"
-    },
-    {
       "bibcode": "2026arXiv260937188A",
       "title": "MEGATRON: Dwarf Galaxy Quenching in the Epoch of Reionization"
     },
     {
-      "bibcode": "2026arXiv261108630O",
-      "title": "VENUS: Strong Lens Mass Models and Einstein Radii of 60 Galaxy Clusters"
-    },
-    {
-      "bibcode": "2026arXiv261024064B",
-      "title": "Consistently Reproducing Early Galaxy Observations and 21-cm Signal during the Epoch of Reionization"
+      "bibcode": "2026arXiv260631583B",
+      "title": "Predisposition of galaxy clusters to producing exotic hyperbolic umbilic lensing configurations"
     },
     {
       "bibcode": "2026arXiv261040770B",
@@ -92,6 +92,10 @@
     {
       "bibcode": "2026arXiv261107013M",
       "title": "Latest $\u03bd$s from the Earliest Galaxies: Probing neutrino self-interactions with JWST"
+    },
+    {
+      "bibcode": "2026arXiv261024064B",
+      "title": "Consistently Reproducing Early Galaxy Observations and 21-cm Signal during the Epoch of Reionization"
     },
     {
       "bibcode": "2024arXiv240305398M",
